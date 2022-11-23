@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #85888C ;
+    font-family: 'Roboto', sans-serif;;
+}
+
+/*---------HEADER---------*/
+
+.nav{
+  position: fixed;
+  background: #fff;
+  height: 150px;
+  color: #fff;
+  width: 100%;
+}
+
+.nav_container{
+  overflow: hidden;
+  display: flex;
+  height: 100%; 
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo1 img{
+  position: absolute;
+  height: 150px;
+  top: 0;
+  left: 0;
+}
+.nav_logo2 img{
+  position: absolute;
+  height: 50px;
+  right: 0;
+  top: 40px;
+}
+
+.nav_label, .nav_input{
+  display: none;
+}
+
+.nav_menu{
+  display: grid;
+  grid-auto-flow: column;
+  
+  
+}
+.nav_menu a:not(:last-child){
+  border-right: none;
+}
+
+.nav_menu a:hover{
+  background-color: #95c11f;
+  
+}
+
+.nav_item {
+  border-radius: 12px;
+  background-color: #ffffff; /* Green */
+  /*border: 1px solid green;*/
+  color: rgb(0, 0, 0);
+  padding: 15px 62px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+ 
+}
+
+/*-------------SUBMENU---------*/
+
+
+/*.nav_item::after{
+}*/
+@media (max-width: 1550px){
+ .nav_item{
+  padding:  15px 50px;
+ }
+  .nav_menu{
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 90px;
+  }
+  
+}
+@media (max-width: 1350px){
+  .nav_item{
+    padding:  15px 30px;
+   }
+  .nav_menu{
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 1150px){
+
+  .nav_label{
+    
+    display: block;
+    cursor: pointer;
+  }
+  .nav_item{
+    background: transparent;
+    font-size: 22px;
+  }
+  .nav_menu{
+    background-image: url(/Principal5/imagenes/JVF\ 2022\ -\ Marca\ \(1\)_pages-to-jpg-0004.jpg); ;
+    
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+  .nav_menu{
+    
+    position: fixed;
+    top: 150px;
+    height: 400px;
+    opacity: 1;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    clip-path:  polygon(0 0, 100% 0, 100% 0, 0 0); 
+    transition: clip-path 1s ease-in-out;
+    padding: 20px ;
+    margin-left: 0;
+    
+  }
+  .nav_input:checked + .nav_menu{
+    
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  
+}
+@media (max-width: 650px){
+  .nav_logo1 img{
+    position: absolute;
+    display: block;
+    height: 100px;
+   
+   top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  .nav_logo2 img{
+    position: absolute;
+    height: 40px;
+    margin-top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .nav_label{
+   
+    position: absolute;
+    cursor: pointer;
+    top: 50px;
+    left: 10px;
+    
+  }
+
+}
+
