@@ -4,11 +4,11 @@
 .container{
   padding: 50px 40px;
   display: flex;
-  align-items: center;
+  
   justify-content: space-between;
 }
 .card{
-  height: 280px;
+  height: 300px;
   max-width: 350px;
   margin: 0 20px;
   background: white;
@@ -20,13 +20,13 @@
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 .card .img{
-  height: 200px;
+  height: 220px;
   width: 100%;
 }
 .card .img img{
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: initial;
 }
 .card .top-text{
   padding: 5px;

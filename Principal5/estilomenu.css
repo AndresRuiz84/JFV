@@ -6,8 +6,11 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #85888C ;
+  
+   width: 100%;
+   height: 100%;
     font-family: 'Roboto', sans-serif;;
+    
 }
 
 /*---------HEADER---------*/
@@ -18,6 +21,7 @@ body{
   height: 150px;
   color: #fff;
   width: 100%;
+  z-index: 100;
 }
 
 .nav_container{
